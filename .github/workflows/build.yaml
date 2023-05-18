@@ -1,0 +1,55 @@
+name: Build firmware
+
+on:
+  push:
+    paths-ignore:
+      - '**.md'
+  pull_request:
+    paths-ignore:
+      - '**.md'
+  workflow_dispatch:
+
+env:
+  KEYBOARD: moonlander
+  KEYMAP: ilabutin
+
+jobs:
+  build-firmware:
+    runs-on: ubuntu-latest
+    container: qmkfm/qmk_cli
+
+    steps:
+      - name: Checkout ZSA QMK
+        uses: actions/checkout@v3
+        with:
+          repository: ilabutin/zsa_qmk_firmware
+          fetch-depth: 1
+          persist-credentials: false
+          submodules: true
+
+      - name: Checkout keymap
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+          submodules: true
+          path: "keyboards/${{ env.KEYBOARD }}/keymaps/${{ env.KEYMAP }}"
+
+      - name: Build
+        id: build
+        run: |
+
+          make ${{ env.KEYBOARD }}:${{ env.KEYMAP }}
+
+          TARGET="$(echo "${{ env.KEYBOARD }}" | sed 's#/#_#g')_${{ env.KEYMAP }}"
+          echo "artifact-name=${TARGET}" >> $GITHUB_OUTPUT
+          echo "Artifact-name: ${{ steps.build.outputs.artifact-name }}"
+
+      - name: Archive artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: "${{ steps.build.outputs.artifact-name }}"
+          path: |
+            *.hex
+            *.bin
+        continue-on-error: true
