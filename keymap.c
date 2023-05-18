@@ -268,27 +268,27 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //---------------------------------------------------------------------------
   LANG_TWO_LAYERS(
     L_EN, L_EN_S,
-
     /* Left hand */
-             AC_GRV,  EN_X,    EN_Y,    EN_P,    EN_S_I,
-             EN_A,    EN_O,    EN_E,    EN_U,    EN_I,
-    XXXXXXX, AC_ACT,  EN_Q,    EN_J,    EN_K,    AC_CIRC,
+             EN_Q,    EN_W,    EN_E,    EN_R,    EN_T,
+             EN_A,    EN_S,    EN_D,    EN_F,    EN_G,
+    XXXXXXX, EN_Z,    EN_X,    EN_C,    EN_V,    EN_B,
 
     /* Right hand */
-    EN_F,    EN_G,    EN_C,    EN_R,    EN_L,
-    EN_D,    EN_H,    EN_T,    EN_N,    EN_S,    XXXXXXX,
-    EN_B,    EN_M,    EN_W,    EN_V,    EN_Z,    AC_TILD,
+
+    EN_Y,    EN_U,    EN_I,    EN_O,    EN_P,
+    EN_H,    EN_J,    EN_K,    EN_L,    XXXXXXX,    XXXXXXX,
+    EN_N,    EN_M,    XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX,
 
     /* ---------------------------- Shift layer ---------------------------- */
     /* Left hand */
-             AC_GRV,  EN_S_X,  EN_S_Y,  EN_S_P,  EN_S_I,
-             EN_S_A,  EN_S_O,  EN_S_E,  EN_S_U,  EN_S_I,
-    _______, AC_ACT,  EN_S_Q,  EN_S_J,  EN_S_K,  AC_CIRC, 
+             EN_S_Q,    EN_S_W,    EN_S_E,    EN_S_R,    EN_S_T,
+             EN_S_A,    EN_S_S,    EN_S_D,    EN_S_F,    EN_S_G,
+    _______, EN_S_Z,    EN_S_X,    EN_S_C,    EN_S_V,    EN_S_B,
 
     /* Right hand */
-    EN_S_F,  EN_S_G,  EN_S_C,  EN_S_R,  EN_S_L,
-    EN_S_D,  EN_S_H,  EN_S_T,  EN_S_N,  EN_S_S,  _______,
-    EN_S_B,  EN_S_M,  EN_S_W,  EN_S_V,  EN_S_Z,  _______
+    EN_S_Y,    EN_S_U,    EN_S_I,    EN_S_O,    EN_S_P,
+    EN_S_H,    EN_S_J,    EN_S_K,    EN_S_L,    _______,    _______,
+    EN_S_N,    EN_S_M,    _______,   _______,   _______,    _______
   )
 
   //---------------------------------------------------------------------------
@@ -296,25 +296,25 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     L_RU, L_RU_S,
 
     /* Left hand */
-             RU_J,    RU_TS,   RU_U,    RU_JE,   RU_F,
-             RU_K,    RU_M,    RU_V,    RU_A,    RU_P,
-    XXXXXXX, RU_JA,   RU_CH,   RU_S,    RU_I,    RU_Y,
+             RU_J,    RU_TS,   RU_U,    RU_K,    RU_JE,
+             RU_F,    RU_Y,    RU_V,    RU_A,    RU_P,
+    RU_HD,   RU_JA,   RU_CH,   RU_S,    RU_M,    RU_I,
 
     /* Right hand */
-    RU_SC,   RU_Z,    RU_T,    RU_N,    RU_G,
-    CMS_R,   RU_O,    RU_L,    RU_D,    RU_ZH,   RU_E,
-    CMS_SH,  RU_SF,   RU_B,    RU_JU,   RU_H,    RU_JO,
+    RU_N,    RU_G,    RU_SH,   RU_SC,   RU_Z,
+    RU_R,    RU_O,    RU_L,    RU_D,    RU_ZH,   RU_E,
+    RU_T,    RU_SF,   RU_B,    RU_JU,   RU_H,    RU_JO,
 
     /* ---------------------------- Shift layer ---------------------------- */
     /* Left hand */
-             RU_S_J,  RU_S_TS, RU_S_U,  RU_S_JE, RU_S_F,
-             RU_S_K,  RU_S_M,  RU_S_V,  RU_S_A,  RU_S_P,
-    _______, RU_S_JA, RU_S_CH, RU_S_S,  RU_S_I,  RU_S_Y,
+             RU_S_J,    RU_S_TS,   RU_S_U,    RU_S_K,    RU_S_JE,
+             RU_S_F,    RU_S_Y,    RU_S_V,    RU_S_A,    RU_S_P,
+    RU_S_HD, RU_S_JA,   RU_S_CH,   RU_S_S,    RU_S_M,    RU_S_I,
 
     /* Right hand */
-    RU_S_SC, RU_S_Z,  RU_S_T,  RU_S_N,  RU_S_G,
-    CMS_S_R, RU_S_O,  RU_S_L,  RU_S_D,  RU_S_ZH, RU_S_E,
-    CMS_SSH, RU_S_SF, RU_S_B,  RU_S_JU, RU_S_H,  RU_S_JO
+    RU_S_N,    RU_S_G,    RU_S_SH,   RU_S_SC,   RU_S_Z,
+    RU_S_R,    RU_S_O,    RU_S_L,    RU_S_D,    RU_S_ZH,   RU_S_E,
+    RU_S_T,    RU_S_SF,   RU_S_B,    RU_S_JU,   RU_S_H,    RU_S_JO
   )
 
   //---------------------------------------------------------------------------
@@ -345,7 +345,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_MUTE, KC_F5,   CS_T,    CT_T,    CT_W,     F6_CT_C,  _______,
     KC_VOLU, KC_MPRV, KC_MNXT, CT_PGUP, CT_PGDN,  KC_MPLY,  _______,
     KC_VOLD, CT_F5,   CS_P,    CT_1,    CT_2,     AL_PSCR,
-    _______, _______, _______, _______, _______,  
+    _______, _______, _______, _______, _______,
     _______, // LEFT RED THUMB KEY
     _______, _______, _______, // LEFT THUMB KEYS
 
@@ -387,7 +387,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R, _______,  _______,
     KC_BTN1, RP_001,  RP_003,  RP_002,  RP_004,  KC_BTN2,  _______,
     KC_LGUI, RP_005,  RP_007,  RP_006,  RP_008,  KC_BTN3,
-    _______, _______, _______, _______, _______,  
+    _______, _______, _______, _______, _______,
     _______, // LEFT RED THUMB KEY
     _______, _______, _______, // LEFT THUMB KEYS
 
@@ -408,7 +408,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XC_NIN,  XC_IN,   XC_SBST, XC_DEGR, XC_PLMN, XC_MU,    _______,
     XC_MUSC, XC_LEFT, XC_DOWN, XC_UP,   XC_RGHT, XC_LMBD,  _______,
     XC_ANGL, XC_IFAI, XC_EXST, XC_ALL,  XC_THEN, XC_PI,
-    _______, _______, _______, _______, _______,  
+    _______, _______, _______, _______, _______,
     _______, // LEFT RED THUMB KEY
     _______, _______, _______, // LEFT THUMB KEYS
 
@@ -421,7 +421,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                       _______, // RIGHT RED THUMB KEY
                       _______, _______, _______ // RIGHT THUMB KEYS
   ),
-  
+
   //---------------------------------------------------------------------------
   [L_YELW] = MY_layout(
     // LEFT HALF
@@ -643,18 +643,18 @@ const uint8_t PROGMEM ledmap[][DRIVER_LED_TOTAL] = {
       COLOR_ANNUL, COLOR_ANNUL, COLOR_ANNUL, COLOR_ANNUL, COLOR_ANYFN,
       COLOR_MIDDL, COLOR_MIDDL, COLOR_MIDDL, COLOR_MIDDL, COLOR_THUMB,
       COLOR_INDEX, COLOR_INDEX, COLOR_INDEX, COLOR_INDEX, COLOR_THUMB,
-      COLOR_INDEX, COLOR_INDEX, COLOR_INDEX, COLOR_INDEX, 
-      COLOR_INDEX, COLOR_INDEX, COLOR_INDEX, 
+      COLOR_INDEX, COLOR_INDEX, COLOR_INDEX, COLOR_INDEX,
+      COLOR_INDEX, COLOR_INDEX, COLOR_INDEX,
       COLOR_THUMB,
-      COLOR_THUMB, COLOR_THUMB, COLOR_THUMB, 
+      COLOR_THUMB, COLOR_THUMB, COLOR_THUMB,
 
       COLOR_ANYFN, COLOR_PINKY, COLOR_PINKY, COLOR_PINKY, COLOR_ANYFN,
       COLOR_PINKY, COLOR_PINKY, COLOR_PINKY, COLOR_PINKY, COLOR_ANYFN,
       COLOR_ANNUL, COLOR_ANNUL, COLOR_ANNUL, COLOR_ANNUL, COLOR_ANYFN,
       COLOR_MIDDL, COLOR_MIDDL, COLOR_MIDDL, COLOR_MIDDL, COLOR_THUMB,
       COLOR_INDEX, COLOR_INDEX, COLOR_INDEX, COLOR_INDEX, COLOR_THUMB,
-      COLOR_INDEX, COLOR_INDEX, COLOR_INDEX, COLOR_INDEX, 
-      COLOR_INDEX, COLOR_INDEX, COLOR_INDEX, 
+      COLOR_INDEX, COLOR_INDEX, COLOR_INDEX, COLOR_INDEX,
+      COLOR_INDEX, COLOR_INDEX, COLOR_INDEX,
       COLOR_THUMB,
       COLOR_THUMB, COLOR_THUMB, COLOR_THUMB
     },
@@ -665,18 +665,18 @@ const uint8_t PROGMEM ledmap[][DRIVER_LED_TOTAL] = {
       ___________, ___________, ___________, ___________, ___________,
       ___________, ___________, ___________, ___________, ___________,
       ___________, ___________, ___________, ___________, ___________,
-      ___________, ___________, ___________, ___________, 
-      ___________, ___________, ___________, 
+      ___________, ___________, ___________, ___________,
+      ___________, ___________, ___________,
       COLOR_LAYER,
-      COLOR_LAYER, COLOR_LAYER, COLOR_LAYER, 
+      COLOR_LAYER, COLOR_LAYER, COLOR_LAYER,
 
       ___________, ___________, ___________, ___________, ___________,
       ___________, ___________, ___________, ___________, ___________,
       ___________, ___________, ___________, ___________, ___________,
       ___________, ___________, ___________, ___________, ___________,
       ___________, ___________, ___________, ___________, ___________,
-      ___________, ___________, ___________, ___________, 
-      ___________, ___________, ___________, 
+      ___________, ___________, ___________, ___________,
+      ___________, ___________, ___________,
       COLOR_LAYER,
       COLOR_LAYER, COLOR_LAYER, COLOR_LAYER
     },
@@ -774,13 +774,13 @@ void combo_max_count_error(void) {
 
 float error_song2[][2] = SONG(VOICE_CHANGE_SOUND);
 void combo_max_size_error(void) {
-  PLAY_SONG(error_song2); 
+  PLAY_SONG(error_song2);
   uprintf("COMBO ERROR: MAX COMBO SIZE HAS REACHED\n");
 }
 
 void repeated_key_error(void) {
-  PLAY_SONG(error_song2); 
-  uprintf("REPEATED KEY ERROR\n"); 
+  PLAY_SONG(error_song2);
+  uprintf("REPEATED KEY ERROR\n");
 }
 
 void user_timer(void) {
