@@ -208,9 +208,9 @@ enum Layers {
        LH1, LH2, LH3, LH4, LH5, \
   LD0, LD1, LD2, LD3, LD4, LD5, \
   /* Right hand */ \
-  RU1, RU2, RU3, RU4, RU5, \
+  RU1, RU2, RU3, RU4, RU5, RU6, \
   RH1, RH2, RH3, RH4, RH5, RH6, \
-  RD1, RD2, RD3, RD4, RD5, RD6, \
+  RD1, RD2, RD3, RD4, RD5,      \
   \
   /* ---------------------------- Shift layer ---------------------------- */ \
   /* Left hand */ \
@@ -218,9 +218,9 @@ enum Layers {
         SLH1, SLH2, SLH3, SLH4, SLH5, \
   SLD0, SLD1, SLD2, SLD3, SLD4, SLD5, \
   /* Right hand */ \
-  SRU1, SRU2, SRU3, SRU4, SRU5, \
+  SRU1, SRU2, SRU3, SRU4, SRU5, SRU6, \
   SRH1, SRH2, SRH3, SRH4, SRH5, SRH6, \
-  SRD1, SRD2, SRD3, SRD4, SRD5, SRD6 \
+  SRD1, SRD2, SRD3, SRD4, SRD5        \
 ) \
   /*-------------------------------------------------------------------------*/ \
   [L_DEFAULT] = MY_layout( \
@@ -235,9 +235,9 @@ enum Layers {
     \
     /* RIGHT HALF */ \
     EN_CIRC, CMB_EQL, CMB_CLN, CMB_CMM, CMB_QUE, CMB_SLS, CT_Z, \
-    CT_S,    RU1,     RU2,     RU3,     RU4,     RU5,     AG_MINS, \
+    CT_S,    RU1,     RU2,     RU3,     RU4,     RU5,     RU6, \
     CT_D,    RH1,     RH2,     RH3,     RH4,     RH5,     RH6, \
-             RD1,     RD2,     RD3,     RD4,     RD5,     RD6, \
+             RD1,     RD2,     RD3,     RD4,     RD5,     AG_MINS, \
                       CMB_RED, AG_3DOT, KG_NEXT, TT_GAME, TT_NUCL, \
                       CMB_ALT, /* RIGHT RED THUMB KEY */ \
                       CMB_LAN, CMB_DOT, CMB_SPC /* RIGHT THUMB KEYS */ \
@@ -255,10 +255,10 @@ enum Layers {
     _______, _______, _______, /* LEFT THUMB KEYS */ \
     \
     /* RIGHT HALF */ \
-    _______, _______, AG2COLN, AG_COMM, _______, AG2SLSH, CT_Y, \
-    _______, SRU1,    SRU2,    SRU3,    SRU4,    SRU5,    _______, \
-    _______, SRH1,    SRH2,    SRH3,    SRH4,    SRH5,    SRH6, \
-             SRD1,    SRD2,    SRD3,    SRD4,    SRD5,    SRD6, \
+    _______, _______, AG2COLN, AG_COMM, _______, AG2SLSH, CT_Y,    \
+    _______, SRU1,    SRU2,    SRU3,    SRU4,    SRU5,    SRU6,    \
+    _______, SRH1,    SRH2,    SRH3,    SRH4,    SRH5,    SRH6,    \
+             SRD1,    SRD2,    SRD3,    SRD4,    SRD5,    _______, \
                       _______, _______, _______, _______, _______, \
                       _______, /* RIGHT RED THUMB KEY */ \
                       _______, _______, _______ /* RIGHT THUMB KEYS */ \
@@ -275,9 +275,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     /* Right hand */
 
-    EN_Y,    EN_U,    EN_I,    EN_O,    EN_P,
+    EN_Y,    EN_U,    EN_I,    EN_O,    EN_P,       XXXXXXX,
     EN_H,    EN_J,    EN_K,    EN_L,    XXXXXXX,    XXXXXXX,
-    EN_N,    EN_M,    XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX,
+    EN_N,    EN_M,    XXXXXXX, XXXXXXX, XXXXXXX,
 
     /* ---------------------------- Shift layer ---------------------------- */
     /* Left hand */
@@ -286,9 +286,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, EN_S_Z,    EN_S_X,    EN_S_C,    EN_S_V,    EN_S_B,
 
     /* Right hand */
-    EN_S_Y,    EN_S_U,    EN_S_I,    EN_S_O,    EN_S_P,
+    EN_S_Y,    EN_S_U,    EN_S_I,    EN_S_O,    EN_S_P,     _______,
     EN_S_H,    EN_S_J,    EN_S_K,    EN_S_L,    _______,    _______,
-    EN_S_N,    EN_S_M,    _______,   _______,   _______,    _______
+    EN_S_N,    EN_S_M,    _______,   _______,   _______
   )
 
   //---------------------------------------------------------------------------
@@ -301,9 +301,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     RU_HD,   RU_JA,   RU_CH,   RU_S,    RU_M,    RU_I,
 
     /* Right hand */
-    RU_N,    RU_G,    RU_SH,   RU_SC,   RU_Z,
+    RU_N,    RU_G,    RU_SH,   RU_SC,   RU_Z,    RU_H,
     RU_R,    RU_O,    RU_L,    RU_D,    RU_ZH,   RU_E,
-    RU_T,    RU_SF,   RU_B,    RU_JU,   RU_H,    RU_JO,
+    RU_T,    RU_SF,   RU_B,    RU_JU,   RU_JO,
 
     /* ---------------------------- Shift layer ---------------------------- */
     /* Left hand */
@@ -312,9 +312,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     RU_S_HD, RU_S_JA,   RU_S_CH,   RU_S_S,    RU_S_M,    RU_S_I,
 
     /* Right hand */
-    RU_S_N,    RU_S_G,    RU_S_SH,   RU_S_SC,   RU_S_Z,
+    RU_S_N,    RU_S_G,    RU_S_SH,   RU_S_SC,   RU_S_Z,    RU_S_H,
     RU_S_R,    RU_S_O,    RU_S_L,    RU_S_D,    RU_S_ZH,   RU_S_E,
-    RU_S_T,    RU_S_SF,   RU_S_B,    RU_S_JU,   RU_S_H,    RU_S_JO
+    RU_S_T,    RU_S_SF,   RU_S_B,    RU_S_JU,   RU_S_JO
   )
 
   //---------------------------------------------------------------------------
